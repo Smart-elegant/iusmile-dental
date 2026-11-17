@@ -1105,7 +1105,6 @@
          align-items: center !important;
      }
 
-     /* ขยายฝั่งข้อความแบนเนอร์ให้เต็มความกว้างจอ 100% */
      .hero-left {
          width: 100% !important;
          max-width: 100% !important;
@@ -1117,14 +1116,12 @@
          gap: 12px !important;
      }
 
-     /* ถ้าฝั่งซ้ายเป็นรูปภาพ ให้ขยายเต็มกรอบพอดีจอ */
      .hero-left img {
          width: 100% !important;
          max-width: 100% !important;
          height: auto !important;
      }
 
-     /* ซ่อนฝั่งรูปคุณหมอ (ขวา) เฉพาะบนมือถือ ส่วนหน้า Desktop ยังโชว์เหมือนเดิม */
      .hero-right {
          display: none !important;
      }
@@ -1334,25 +1331,43 @@
          line-height: 1.6 !important;
          margin: 0 !important;
      }
-
      .about-gallery {
-         padding: 0 10px;
+         padding: 28px 18px !important;
+         width: 100% !important;
+         box-sizing: border-box;
      }
 
-     .gallery-row {
-         display: flex;
+     .about-gallery h2 {
+         font-size: 1.5rem !important;
+         text-align: center !important;
+         margin-bottom: 20px !important;
+     }
+     .gallery-row,
+     .top-row,
+     .bottom-row {
+         display: flex !important;
+         flex-direction: column !important;
+         gap: 16px !important;
+         width: 100% !important;
+         margin-bottom: 16px !important;
+         box-sizing: border-box;
      }
 
-     .top-row .gallery-item {
-         flex: 1;
+     .gallery-item {
+         width: 100% !important;
+         max-width: 100% !important;
+         height: auto !important;
+         flex: none !important;
+         border-radius: 16px !important;
+         overflow: hidden !important;
+         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
      }
 
-     .bottom-row .gallery-item:nth-child(1) {
-         flex: 4;
-     }
-
-     .bottom-row .gallery-item:nth-child(2) {
-         flex: 6;
+     .gallery-item img {
+         width: 100% !important;
+         height: auto !important;
+         object-fit: cover !important;
+         display: block !important;
      }
 
      .reviews-section {
