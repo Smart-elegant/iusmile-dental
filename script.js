@@ -22,3 +22,15 @@ function toggleDentistInfo(btn) {
     btn.style.backgroundColor = '#007bff';
   }
 }
+document.querySelectorAll('.accordion-gallery').forEach((gallery) => {
+  const cards = gallery.querySelectorAll('.doctor-card');
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      // ลบ active เฉพาะในแขนงเดียวกัน (ไม่ไปยุ่งกับแขนงอื่น)
+      cards.forEach((c) => c.classList.remove('active'));
+      // ใส่ active ให้ใบที่ถูกกด
+      card.classList.add('active');
+    });
+  });
+});
